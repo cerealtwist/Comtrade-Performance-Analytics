@@ -86,13 +86,16 @@ def build_periods(start_year: int, end_year: int) -> list[str]:
 def fetch_comtrade_year(year: int, flow: str) -> pd.DataFrame:
     """
     Fetch one year of monthly HS85 trade data for Indonesia.
+    Uses _getFinalData which auto-batches periods and handles
+    pagination - suitable for large multi-month queries.
     flow: 'X' for exports, 'M' for imports
     """
     period_str = ",".join([f"{year}{m:02d}" for m in range(1, 13)])
 
     log.info(f"Fetching Comtrade | year={year} | flow={flow}")
 
-    df = comtradeapicall.previewFinalData(
+    df = comtradeapicall._getFinalData(
+        subscription_key=API_KEY,
         typeCode='C',
         freqCode='M',
         clCode='HS',
@@ -100,17 +103,16 @@ def fetch_comtrade_year(year: int, flow: str) -> pd.DataFrame:
         reporterCode=INDONESIA_CODE,
         cmdCode=HS_CHAPTER,
         flowCode=flow,
-        partnerCode=None,       # all partners
+        partnerCode=None,
         partner2Code=None,
         customsCode=None,
         motCode=None,
-        maxRecords=100000,
+        maxRecords=250000,
         format_output='JSON',
         aggregateBy=None,
         breakdownMode='classic',
         countOnly=None,
-        includeDesc=True,
-        subscription_key=API_KEY
+        includeDesc=True
     )
 
     if df is None or df.empty:
