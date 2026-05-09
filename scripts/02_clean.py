@@ -85,7 +85,7 @@ def clean_comtrade() -> tuple[pd.DataFrame, pd.DataFrame]:
     df_partners = df.loc[df["partner_iso"].isin(FOCUS_PARTNERS.keys())].copy()
     df_world = df.loc[df["partner_iso"] == "W00"].copy()
 
-    # Overwrite partner_name from our mapping for consistency
+    # Overwrite partner_name from mapping for consistency
     df_partners = df_partners.assign(
         partner_name=df_partners["partner_iso"].map(FOCUS_PARTNERS)
     )
