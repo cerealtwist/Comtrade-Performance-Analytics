@@ -1,3 +1,34 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment / secrets
 .env
-data/raw/extraction.log
-data/raw/worldbank_lpi_20260508.csv
+*.env
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*.log
+.DS_Store
+
+# Raw data / large generated files
+data/raw/
+data/raw/*.log
