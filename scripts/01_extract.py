@@ -43,6 +43,7 @@ START_YEAR     = 2015
 END_YEAR       = 2024
 
 # Key trading partners: China, Japan, Singapore, USA, Germany, Malaysia, South Korea
+# Update: Added Vietnam, Thailand, Philippines, and Taiwan from a new insight (Journal/Report/Article Findings)
 PARTNER_CODES = {
     "156": "China",
     "392": "Japan",
@@ -50,7 +51,11 @@ PARTNER_CODES = {
     "840": "USA",
     "276": "Germany",
     "458": "Malaysia",
-    "410": "South Korea"
+    "410": "South Korea",
+    "704": "Vietnam",
+    "764": "Thailand",
+    "608": "Philippines",
+    "158": "Taiwan"
 }
 
 # World Bank LPI indicator codes
@@ -65,7 +70,7 @@ LPI_INDICATORS = {
 }
 
 # World Bank country codes for our partners + Indonesia
-WB_COUNTRIES = "IDN;CHN;JPN;SGP;USA;DEU;MYS;KOR"
+WB_COUNTRIES = "IDN;CHN;JPN;SGP;USA;DEU;MYS;KOR;VNM;THA;PHL"
 
 
 # Comtrade Extraction

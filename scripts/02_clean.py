@@ -24,7 +24,7 @@ log = logging.getLogger(__name__)
 
 RAW_DIR = "data/raw"
 PROCESSED_DIR = "data/processed"
-TIMESTAMP = "20260508"
+TIMESTAMP = "20260509"
 
 # Comtrade Cleaning
 
@@ -53,7 +53,11 @@ FOCUS_PARTNERS = {
     "DEU": "Germany",
     "MYS": "Malaysia",
     "KOR": "South Korea",
-    "W00": "World",
+    "VNM": "Vietnam",
+    "THA": "Thailand",
+    "PHL": "Philippines",
+    "TWN": "Taiwan",
+    "W00": "World"
 }
 
 
