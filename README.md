@@ -52,8 +52,7 @@ Comtrade-Performance-Analytics/
 ├── notebooks/
 │   └── analysis.ipynb                # Full analysis with visualizations
 ├── scripts/
-│   ├── 01_extract.py                 # Data extraction from APIs
-│   ├── 01b_resume.py                 # Resume script after crash
+│   ├── 01_extract.py                 # Data extraction from APIs 
 │   ├── 02_clean.py                   # Data cleaning pipeline
 │   └── 03_features.py                # Feature engineering
 ├── dashboard/
@@ -168,4 +167,4 @@ Open `dashboard/Indonesia_HS85_Supply_Chain_Analytics.twbx` in Tableau Desktop o
 
 ## Author
 
-**Farand** | Data Science Student, Telkom University
+**Farand Diy Dat Mahazalfaa** | Data Science Student, Telkom University
